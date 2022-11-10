@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+  scrollbar-width: none;
+
+  .card-group {
+    margin: 30px 7px;
+  }
+}
+
+.main::-webkit-scrollbar {
+  width: 0px;
+}

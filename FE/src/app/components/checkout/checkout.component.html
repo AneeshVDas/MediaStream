@@ -1,0 +1,69 @@
+<div class="checkout">
+  <mat-toolbar>
+    <span class="float-right">
+      <i class="material-icons">shopping_cart</i>
+    </span>
+    <span>Checkout</span>
+  </mat-toolbar>
+  <form class="example-form">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Plan name</mat-label>
+            <input matInput disabled value="{{plan.name}}">
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Amount</mat-label>
+            <input matInput disabled value="{{plan.price}}">
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Streams</mat-label>
+            <input matInput disabled value="{{plan.concurrent_streams}}">
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Max-Quality</mat-label>
+            <input matInput disabled value="{{plan.max_quality}} ">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Select Quantity (Per Month)</mat-label>
+            <input matInput type="number" [(ngModel)]="Quantity" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Enter Password</mat-label>
+            <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </td>
+
+
+      </tr>
+      <tr>
+        <td></td>
+        <td style="text-align: right;">
+          <button (click)="Pay()" mat-flat-button color="primary">Proceed to Payment</button>
+        </td>
+
+      </tr>
+
+
+    </table>
+
+  </form>
+</div>

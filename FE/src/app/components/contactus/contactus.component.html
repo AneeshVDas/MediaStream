@@ -1,0 +1,39 @@
+<p>
+  <mat-toolbar style="text-align: center;">
+    <span style="margin: auto;">Contact Us</span>
+  </mat-toolbar>
+</p>
+<div class="team_wrapper">
+  <div class="Team_card" *ngFor="let team of team">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="{{team.class}}"> </div>
+        <mat-card-title>{{team.name}}</mat-card-title>
+        <mat-card-subtitle>{{team.designation}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="(team.image)" width="200px">
+      <mat-card-content>{{team.desc}}
+      </mat-card-content>
+      <mat-card-actions>
+        <a *ngIf="team.fb" mat-icon-button href="{{team.fb}}" target="_blank" >
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a *ngIf="team.git" mat-icon-button href="{{team.git}}" target="_blank">
+          <mat-icon svgIcon="GITHUB" aria-hidden="false" aria-label="icon"></mat-icon>
+        </a>
+        <a *ngIf="team.linkedin" mat-icon-button href="{{team.linkedin}}" target="_blank">
+          <mat-icon svgIcon="LINKDIN" aria-hidden="false" aria-label="icon"></mat-icon>
+        </a>
+        <a *ngIf="team.mail" mat-icon-button href="mailto:{{team.mail}}" target="_blank">
+          <mat-icon>mail</mat-icon>
+        </a>
+        <a *ngIf="team.web" mat-icon-button href="{{team.web}}" target="_blank">
+          <mat-icon>language</mat-icon>
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+
+
+</div>
